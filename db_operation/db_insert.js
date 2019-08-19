@@ -1,10 +1,8 @@
-// require('conn/connection.js');
-// import {dbConnection} from "../conn/connection";
-// var connection = new dbConnection('localhost', 'root');
-// console.log(connection);
-// console.log(connection.createConnection());
-
+/**
+ * Run your application as (to support export, by default node does not support es6 import)
+ * node -r esm db_insert.js
+ */
 import {dbConnection} from "../conn/connection";
 
-var connection = new dbConnection("localhost", "root", "");
-console.log(connection);
+var conn = new dbConnection("localhost", "root", "");
+console.log(conn.createConnection());
